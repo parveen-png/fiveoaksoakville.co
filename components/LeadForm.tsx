@@ -21,6 +21,7 @@ import { flattenLeadErrors, leadInputSchema } from "@/lib/validation";
 
 interface LeadFormProps {
   idPrefix: string;
+  compact?: boolean;
 }
 
 type FormErrors = Record<string, string>;
@@ -43,7 +44,7 @@ function readQuery(name: string): string {
   return new URLSearchParams(window.location.search).get(name) ?? "";
 }
 
-export function LeadForm({ idPrefix }: LeadFormProps) {
+export function LeadForm({ idPrefix, compact = false }: LeadFormProps) {
   const headingId = `${idPrefix}-form-heading`;
   const summaryId = `${idPrefix}-error-summary`;
   const [values, setValues] = useState(INITIAL);
@@ -211,16 +212,18 @@ export function LeadForm({ idPrefix }: LeadFormProps) {
   return (
     <div
       id={idPrefix === "hero" ? "register" : `${idPrefix}-register`}
-      className="folio relative overflow-hidden p-5 md:p-6"
+      className={`folio relative overflow-hidden ${compact ? "p-4 md:p-5" : "p-5 md:p-6"}`}
     >
       <div className="absolute inset-x-0 top-0 h-1 bg-bronze" />
       <h2
         id={headingId}
-        className="font-display text-2xl tracking-tight text-ink"
+        className={`font-display tracking-tight text-ink ${compact ? "text-xl" : "mt-0 text-2xl"}`}
       >
-        Get Five Oaks project updates
+        {compact ? project.primaryCta : "Get Five Oaks project updates"}
       </h2>
-      <p className="mt-3 text-sm leading-6 text-ink-muted">{copy.formSupport}</p>
+      {compact ? null : (
+        <p className="mt-3 text-sm leading-6 text-ink-muted">{copy.formSupport}</p>
+      )}
 
       {showSummary ? (
         <div
@@ -396,7 +399,9 @@ export function LeadForm({ idPrefix }: LeadFormProps) {
           {status === "submitting" ? userMessages.loading : project.primaryCta}
         </button>
         <p className="text-center text-xs leading-5 text-ink-muted">
-          Takes less than a minute. No prices are sent until official details exist.
+          {compact
+            ? "No prices until official details exist."
+            : "Takes less than a minute. No prices are sent until official details exist."}
         </p>
       </form>
     </div>

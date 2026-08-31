@@ -39,7 +39,7 @@ export default function Home() {
       <JsonLd data={buildJsonLd({ page: homePage })} />
       <Header />
       <main id="main" className="pb-24 lg:pb-0">
-        <section className="relative min-h-[100svh] overflow-hidden">
+        <section className="relative min-h-[70svh] overflow-hidden lg:min-h-[80svh]">
           <Image
             src={images.hero.src}
             alt={images.hero.alt}
@@ -48,50 +48,24 @@ export default function Home() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/35" />
-          <div className="relative mx-auto grid min-h-[100svh] max-w-6xl items-end gap-10 px-5 pb-16 pt-28 sm:px-6 lg:grid-cols-[minmax(0,1fr)_24rem] lg:items-center lg:px-8 lg:pb-20">
-            <div className="max-w-2xl text-paper-elevated">
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/65 to-navy/30" />
+          <div className="relative mx-auto grid min-h-[70svh] max-w-6xl items-end gap-8 px-5 pb-12 pt-28 sm:px-6 lg:min-h-[80svh] lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-center lg:px-8 lg:pb-16">
+            <div className="max-w-xl text-paper-elevated">
               <p className="text-[0.7rem] font-semibold tracking-[0.24em] text-gold uppercase">
-                {project.status} · {project.municipality}, {project.country}
+                {project.status} · Oakville
               </p>
               <h1
                 id="page-title"
-                className="mt-4 font-display text-5xl leading-[1.05] sm:text-6xl lg:text-7xl"
+                className="mt-3 font-display text-5xl leading-[1.05] sm:text-6xl"
               >
                 Five Oaks Oakville
               </h1>
-              <p
-                id="answer-block"
-                className="mt-6 text-base leading-8 text-paper-elevated/95 sm:text-lg"
-              >
-                {copy.whatIsFiveOaks}
+              <p className="mt-4 max-w-md text-base leading-7 text-paper-elevated/90">
+                {copy.heroSupport}
               </p>
-              <p className="mt-5 text-sm italic text-paper-elevated/80">
-                {copy.independentDisclosure}
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3 text-[0.7rem] tracking-[0.16em] uppercase">
-                {["Coming soon", "Detached", "Townhomes", "Oakville"].map(
-                  (chip) => (
-                    <span
-                      key={chip}
-                      className="border border-paper-elevated/30 px-3 py-1"
-                    >
-                      {chip}
-                    </span>
-                  ),
-                )}
-              </div>
-              <Link
-                href="#register"
-                className="btn-primary mt-8 hidden w-fit lg:inline-flex"
-              >
-                {project.primaryCta}
-              </Link>
             </div>
             <div className="lg:justify-self-end">
-              <div className="lg:-translate-y-2">
-                <LeadForm idPrefix="hero" />
-              </div>
+              <LeadForm idPrefix="hero" compact />
             </div>
           </div>
         </section>
@@ -112,11 +86,14 @@ export default function Home() {
               >
                 What is verified, and what is still TBA
               </h2>
-              <p className="mt-4 text-base leading-7 text-ink-muted">
-                {copy.factsExplanation}
+              <p
+                id="answer-block"
+                className="mt-4 text-base leading-7 text-ink"
+              >
+                {copy.whatIsFiveOaks}
               </p>
-              <p className="mt-4 text-sm leading-6 text-ink">
-                {homePage.factExcerpt}
+              <p className="mt-4 text-sm leading-6 text-ink-muted">
+                {copy.factsExplanation}
               </p>
             </div>
             <div className="border-y border-stone">

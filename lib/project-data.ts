@@ -254,7 +254,7 @@ export const copy = {
   whatIsFiveOaks:
     "Five Oaks is a coming-soon new-home community by Caivan Communities in Oakville, Ontario, Canada. The project is planned with single-detached homes and townhomes. This independent informational site is not the official Caivan or Five Oaks website. Official pricing, floor plans, deposits, incentives, the exact site, launch timing and occupancy were not published in the sources reviewed on August 24, 2026. Register here to get project updates as verified details are released.",
   heroSupport:
-    "A lakeside Oakville community is coming from Caivan. Prices and plans are not public yet. Register to receive verified Five Oaks updates.",
+    "Coming soon from Caivan. Detached homes and townhomes. Register for verified updates.",
   formSupport:
     "Ask to be notified when official Five Oaks Oakville pricing, floor plans, deposit information and launch details are published.",
   formTrust: [
