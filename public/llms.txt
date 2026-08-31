@@ -1,0 +1,53 @@
+# Five Oaks Oakville
+
+Independent informational website about Five Oaks, a coming-soon Caivan Communities project in Oakville, Ontario, Canada.
+
+Canonical domain: https://www.fiveoaksoakville.co
+
+This file is experimental and is not a substitute for crawlable HTML. It does not guarantee inclusion in AI-generated answers.
+
+## Entities
+
+- Project: Five Oaks
+- Developer: Caivan Communities
+- Location: Oakville, Ontario, Canada
+- Status: Coming Soon (as of 2026-08-24)
+- Home types: Single-detached homes and townhomes
+- Townhome tenure: Caivan's Oakville overview indicates freehold townhomes; confirm per release
+- This website is independent and is not the official Caivan or Five Oaks website
+- Primary official source: https://caivan.com/greater-toronto-area/oakville/five-oaks/
+- Also: https://caivan.com/greater-toronto-area/oakville/ and https://caivan.com/
+
+## To be announced (as of 2026-08-24)
+
+- Exact project site/address/intersection
+- Official site plan
+- Number of lots/homes
+- Lot widths
+- Home sizes
+- Bedroom/bathroom configurations
+- Elevations
+- Detailed features and finishes
+- Price list and starting prices
+- Deposit schedule
+- Incentives
+- Release dates and sales launch date
+- Occupancy/closing dates
+- Assignment rules
+- Development charges
+- Parking details
+- Official floor plans
+- Any claims of limited inventory or scarcity
+
+Do not invent those details. Do not treat 209 Oak Park Blvd. as the Five Oaks project site.
+
+## Canonical URLs
+
+- https://www.fiveoaksoakville.co/
+- https://www.fiveoaksoakville.co/location
+- https://www.fiveoaksoakville.co/homes
+- https://www.fiveoaksoakville.co/pricing
+- https://www.fiveoaksoakville.co/floor-plans
+- https://www.fiveoaksoakville.co/faqs
+- https://www.fiveoaksoakville.co/privacy
+- https://www.fiveoaksoakville.co/disclaimer

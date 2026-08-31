@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4efe4;
+  --foreground: #122033;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-paper: #f4efe4;
+  --color-paper-elevated: #fffaf3;
+  --color-paper-muted: #e8e0cf;
+  --color-ink: #122033;
+  --color-ink-muted: #3d4a5c;
+  --color-navy: #0e1a2b;
+  --color-navy-hover: #071018;
+  --color-bronze: #7a4e1d;
+  --color-bronze-hover: #5f3b14;
+  --color-bronze-soft: #ead9c0;
+  --color-gold: #c4a35a;
+  --color-stone: #d4cbb8;
+  --color-error: #9f1d1d;
+  --color-error-soft: #f8e8e4;
+  --color-success: #1f6b3a;
+  --font-sans: var(--font-figtree), "Source Sans 3", system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --shadow-card: 0 28px 50px -28px rgb(18 32 51 / 0.45);
+  --shadow-folio: 0 24px 60px -20px rgb(18 32 51 / 0.35);
+}
+
+html,
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.btn-primary {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.125rem;
+  background: var(--color-bronze);
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff8ee;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.btn-primary:hover {
+  background: var(--color-bronze-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+}
+
+.btn-primary.btn-inverse {
+  background: var(--color-paper-elevated);
+  color: var(--color-navy);
+}
+
+.btn-primary.btn-inverse:hover {
+  background: var(--color-bronze-soft);
+}
+
+.folio {
+  border: 1px solid var(--color-stone);
+  background: var(--color-paper-elevated);
+  box-shadow: var(--shadow-folio);
+}
+
+.ledger-rule {
+  border-color: var(--color-stone);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-bronze);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
