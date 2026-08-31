@@ -60,7 +60,10 @@ export default function Home() {
               >
                 Five Oaks Oakville
               </h1>
-              <p className="mt-4 max-w-md text-base leading-7 text-paper-elevated/90">
+              <p
+                id="answer-block"
+                className="mt-4 max-w-md text-base leading-7 text-paper-elevated/90"
+              >
                 {copy.heroSupport}
               </p>
             </div>
@@ -84,17 +87,8 @@ export default function Home() {
                 id="ledger-heading"
                 className="mt-3 font-display text-4xl text-ink"
               >
-                What is verified, and what is still TBA
+                Verified vs TBA
               </h2>
-              <p
-                id="answer-block"
-                className="mt-4 text-base leading-7 text-ink"
-              >
-                {copy.whatIsFiveOaks}
-              </p>
-              <p className="mt-4 text-sm leading-6 text-ink-muted">
-                {copy.factsExplanation}
-              </p>
             </div>
             <div className="border-y border-stone">
               {ledgerFacts.map((fact, index) => (

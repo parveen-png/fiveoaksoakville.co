@@ -44,7 +44,7 @@ export const homePage: PageContent = {
   title: seo.title,
   description: seo.description,
   h1: "Five Oaks Oakville",
-  answer: copy.whatIsFiveOaks,
+  answer: copy.heroSupport,
   factExcerpt:
     "As of August 24, 2026, official Caivan materials confirm Five Oaks as a coming-soon Oakville community of single-detached homes and townhomes. Pricing, floor plans, deposits, incentives, the exact site, launch date and occupancy remain to be announced.",
   factIds: [

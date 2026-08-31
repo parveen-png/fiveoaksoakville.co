@@ -53,16 +53,11 @@ describe("project facts", () => {
 });
 
 describe("homepage answer block", () => {
-  it("keeps the first overview in the 40–80 word range and names required entities", () => {
-    const text = copy.whatIsFiveOaks;
-    expect(wordCount(text)).toBeGreaterThanOrEqual(40);
-    expect(wordCount(text)).toBeLessThanOrEqual(80);
-    expect(text).toContain("Five Oaks");
-    expect(text).toContain("Caivan Communities");
-    expect(text).toMatch(/Oakville,\s*Ontario,\s*Canada/);
-    expect(text.toLowerCase()).toContain("coming-soon");
+  it("keeps the hero line short and names the project", () => {
+    const text = copy.heroSupport;
+    expect(wordCount(text)).toBeLessThanOrEqual(25);
+    expect(text).toContain("Caivan");
     expect(text.toLowerCase()).toContain("townhome");
-    expect(text.toLowerCase()).toContain("independent");
     expect(text.toLowerCase()).toContain("register");
   });
 

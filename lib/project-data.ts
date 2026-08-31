@@ -251,8 +251,6 @@ export const copy = {
     "Have your lawyer review the Agreement of Purchase and Sale and all schedules before applicable deadlines.",
   checklistIntro:
     "This checklist is general buyer due-diligence information, not individualized legal or financial advice.",
-  whatIsFiveOaks:
-    "Five Oaks is a coming-soon new-home community by Caivan Communities in Oakville, Ontario, Canada. The project is planned with single-detached homes and townhomes. This independent informational site is not the official Caivan or Five Oaks website. Official pricing, floor plans, deposits, incentives, the exact site, launch timing and occupancy were not published in the sources reviewed on August 24, 2026. Register here to get project updates as verified details are released.",
   heroSupport:
     "Coming soon from Caivan. Detached homes and townhomes. Register for verified updates.",
   formSupport:
