@@ -168,7 +168,7 @@ describe("sheet contract", () => {
       phone: "",
       productInterest: "townhome",
       marketingConsent: false,
-      landingPage: "https://www.fiveoaksoakville.co/",
+      landingPage: "https://www.fiveoakbycaivan.com/",
       submissionId: "test-id",
     });
     expect(row[14]).toBe("Five Oaks Oakville");

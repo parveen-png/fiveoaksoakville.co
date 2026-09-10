@@ -2,7 +2,7 @@
 
 Independent informational website for **Five Oaks**, a coming-soon Caivan Communities community of single-detached homes and townhomes in Oakville, Ontario, Canada.
 
-Canonical origin: **https://www.fiveoaksoakville.co**
+Canonical origin: **https://www.fiveoakbycaivan.com**
 
 This is **not** the official Five Oaks or Caivan website. Official Five Oaks details were incomplete as of **August 24, 2026**. Pricing, floor plans, deposits, incentives, exact project location, launch date and occupancy remain to be announced.
 
@@ -10,18 +10,15 @@ This implementation is a functioning campaign site. It is **not** legally approv
 
 ## Sibling campaign and SEO cannibalization
 
-This `.co` site is a sibling of [fiveoaksbycaivan.ca](https://www.fiveoaksbycaivan.ca/). It uses the **same lead form contract**, **same Google Sheet**, and **same pictures**, with a **new visual design** and a hub-and-spoke URL structure.
+This site is a sibling of [fiveoaksbycaivan.ca](https://www.fiveoaksbycaivan.ca/). It uses the **same lead form contract**, **same Google Sheet**, and **same pictures**, with a **new visual design** and a hub-and-spoke URL structure.
 
-**After this `.co` site is the campaign you want indexed**, 301 or canonical the `.ca` site (and any `.com` duplicate) to matching `.co` URLs so rankings are not split. Do not leave two indexable Five Oaks Oakville homepages with overlapping titles.
+**Canonical campaign domain:** `https://www.fiveoakbycaivan.com`. Apex `fiveoakbycaivan.com` 308s to www. `fiveoaksoakville.co` and `www.fiveoaksoakville.co` 308 to matching `.com` URLs so rankings are not split. Also 301 or canonical the `.ca` site (and `fiveoaksbycaivan.com` if it still duplicates) to matching `fiveoakbycaivan.com` URLs.
 
-Suggested mapping once `.co` is the primary:
-
-| Current duplicate | Target |
+| Duplicate | Target |
 | --- | --- |
-| `https://www.fiveoaksbycaivan.ca/` | `https://www.fiveoaksoakville.co/` |
-| Privacy / disclaimer on `.ca` | Matching `/privacy` and `/disclaimer` on `.co` |
-
-Apex `fiveoaksoakville.co` should 308 to `https://www.fiveoaksoakville.co/`.
+| `https://www.fiveoaksbycaivan.ca/` | `https://www.fiveoakbycaivan.com/` |
+| `https://www.fiveoaksoakville.co/` | `https://www.fiveoakbycaivan.com/` |
+| Privacy / disclaimer on `.ca` | Matching `/privacy` and `/disclaimer` on `.com` |
 
 ## Tech stack
 
@@ -37,8 +34,8 @@ Apex `fiveoaksoakville.co` should 308 to `https://www.fiveoaksoakville.co/`.
 1. Copy `.env.example` to `.env.local`, or copy production env from the sibling `.ca` project and then set:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://www.fiveoaksoakville.co
-NEXT_PUBLIC_SITE_DOMAIN=www.fiveoaksoakville.co
+NEXT_PUBLIC_SITE_URL=https://www.fiveoakbycaivan.com
+NEXT_PUBLIC_SITE_DOMAIN=www.fiveoakbycaivan.com
 NEXT_PUBLIC_LANDING_PAGE_VARIANT=co-oakville-2026-08
 ```
 
@@ -84,8 +81,8 @@ See `.env.example` for every supported variable. Important groups:
 
 ### Public identity and canonical URL
 
-- `NEXT_PUBLIC_SITE_URL` — production origin `https://www.fiveoaksoakville.co`. Must be HTTPS and not localhost before the site is indexed.
-- `NEXT_PUBLIC_SITE_DOMAIN` — `www.fiveoaksoakville.co`
+- `NEXT_PUBLIC_SITE_URL` — production origin `https://www.fiveoakbycaivan.com`. Must be HTTPS and not localhost before the site is indexed.
+- `NEXT_PUBLIC_SITE_DOMAIN` — `www.fiveoakbycaivan.com`
 - `NEXT_PUBLIC_LANDING_PAGE_VARIANT` — `co-oakville-2026-08`
 - Publisher identity placeholders until legal fills them
 - `NEXT_PUBLIC_NOINDEX` — keep `true` on staging. Set `false` only after the canonical domain is verified.
@@ -143,7 +140,7 @@ Do not present Caivan's general Oakville Sales Centre at 209 Oak Park Blvd. as t
 
 - Allow Googlebot, Bingbot and OAI-SearchBot.
 - `/api/` is disallowed.
-- Homepage sitemap loc uses a trailing slash: `https://www.fiveoaksoakville.co/`
+- Homepage sitemap loc uses a trailing slash: `https://www.fiveoakbycaivan.com/`
 - Every page is self-canonical. Privacy, disclaimer and spokes must not canonical to home.
 - `public/llms.txt` is experimental and is not a substitute for crawlable HTML.
 

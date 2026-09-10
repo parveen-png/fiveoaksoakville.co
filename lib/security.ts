@@ -43,6 +43,8 @@ export function originIsAllowed(request: Request, siteUrl: string): boolean {
       const proto = request.headers.get("x-forwarded-proto") || "https";
       allowed.add(`${proto}://${host}`);
     }
+    allowed.add("https://fiveoakbycaivan.com");
+    allowed.add("https://www.fiveoakbycaivan.com");
     allowed.add("https://fiveoaksoakville.co");
     allowed.add("https://www.fiveoaksoakville.co");
     allowed.add("http://localhost:3000");

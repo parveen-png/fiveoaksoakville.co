@@ -2,7 +2,7 @@
 
 Independent informational website about Five Oaks, a coming-soon Caivan Communities project in Oakville, Ontario, Canada.
 
-Canonical domain: https://www.fiveoaksoakville.co
+Canonical domain: https://www.fiveoakbycaivan.com
 
 This file is experimental and is not a substitute for crawlable HTML. It does not guarantee inclusion in AI-generated answers.
 
@@ -43,11 +43,11 @@ Do not invent those details. Do not treat 209 Oak Park Blvd. as the Five Oaks pr
 
 ## Canonical URLs
 
-- https://www.fiveoaksoakville.co/
-- https://www.fiveoaksoakville.co/location
-- https://www.fiveoaksoakville.co/homes
-- https://www.fiveoaksoakville.co/pricing
-- https://www.fiveoaksoakville.co/floor-plans
-- https://www.fiveoaksoakville.co/faqs
-- https://www.fiveoaksoakville.co/privacy
-- https://www.fiveoaksoakville.co/disclaimer
+- https://www.fiveoakbycaivan.com/
+- https://www.fiveoakbycaivan.com/location
+- https://www.fiveoakbycaivan.com/homes
+- https://www.fiveoakbycaivan.com/pricing
+- https://www.fiveoakbycaivan.com/floor-plans
+- https://www.fiveoakbycaivan.com/faqs
+- https://www.fiveoakbycaivan.com/privacy
+- https://www.fiveoakbycaivan.com/disclaimer

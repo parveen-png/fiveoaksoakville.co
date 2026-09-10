@@ -26,8 +26,20 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/:path*",
+        has: [{ type: "host", value: "fiveoakbycaivan.com" }],
+        destination: "https://www.fiveoakbycaivan.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
         has: [{ type: "host", value: "fiveoaksoakville.co" }],
-        destination: "https://www.fiveoaksoakville.co/:path*",
+        destination: "https://www.fiveoakbycaivan.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.fiveoaksoakville.co" }],
+        destination: "https://www.fiveoakbycaivan.com/:path*",
         permanent: true,
       },
     ];
