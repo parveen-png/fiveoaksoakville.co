@@ -5,7 +5,10 @@ import { ExternalLink } from "@/components/ui";
 import {
   copy,
   displayFactValue,
+  elevations,
   getFact,
+  images,
+  interiors,
   INFORMATION_CHECKED_DISPLAY,
   type FaqItem,
 } from "@/lib/project-data";
@@ -134,11 +137,94 @@ export function NeighbourhoodFigure({
         width={width}
         height={height}
         className="h-auto w-full object-cover"
+        sizes="(max-width: 1024px) 100vw, 50vw"
       />
       <figcaption className="mt-2 text-xs tracking-wide text-ink-muted">
         {caption} Not a Five Oaks rendering.
       </figcaption>
     </figure>
+  );
+}
+
+export function RenderingFigure({
+  src,
+  alt,
+  width,
+  height,
+  caption = copy.renderingQualifier,
+  sizes = "(max-width: 1024px) 100vw, 50vw",
+  priority = false,
+}: {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  caption?: string;
+  sizes?: string;
+  priority?: boolean;
+}) {
+  return (
+    <figure>
+      <Image
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        priority={priority}
+        className="h-auto w-full object-cover"
+        sizes={sizes}
+      />
+      <figcaption className="mt-2 text-xs tracking-wide text-ink-muted">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
+
+export function ElevationGrid() {
+  return (
+    <div className="grid gap-6 sm:grid-cols-2">
+      {elevations.map((elevation) => {
+        const image = images[elevation.imageId];
+        return (
+          <article key={elevation.id}>
+            <RenderingFigure
+              src={image.src}
+              alt={image.alt}
+              width={image.width}
+              height={image.height}
+            />
+            <h3 className="mt-3 font-display text-xl text-ink">
+              {elevation.title}
+            </h3>
+            <p className="mt-1 text-sm text-ink-muted">{elevation.type}</p>
+          </article>
+        );
+      })}
+    </div>
+  );
+}
+
+export function InteriorGrid() {
+  return (
+    <div className="grid gap-6 sm:grid-cols-2">
+      {interiors.map((interior) => {
+        const image = images[interior.imageId];
+        return (
+          <article key={interior.id}>
+            <RenderingFigure
+              src={image.src}
+              alt={image.alt}
+              width={image.width}
+              height={image.height}
+            />
+            <h3 className="mt-3 font-display text-xl text-ink">
+              {interior.title}
+            </h3>
+          </article>
+        );
+      })}
+    </div>
   );
 }
 

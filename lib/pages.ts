@@ -98,9 +98,9 @@ export const homesPage: PageContent = {
     "Five Oaks Oakville is planned with single-detached homes and townhomes. Models, lots and sizes are TBA. Register for verified updates.",
   h1: "Five Oaks townhomes and detached homes",
   answer:
-    "Five Oaks by Caivan Communities is planned as a collection of single-detached homes and townhomes in Oakville, Ontario. Official model names, lot widths, square footage, bedrooms and bathrooms had not been published in the sources reviewed on August 24, 2026. Caivan's Oakville overview indicates freehold townhomes; confirm tenure per release. Register to get project updates when home details are released.",
+    "Five Oaks by Caivan Communities is planned as single-detached homes and townhomes in Oakville, Ontario. Current project materials name detached elevations The Starling, The Merlin and The Sandhill, plus townhome elevations including the 24′ Collection, Advantage Townhomes and B2B. Those images are artist's concepts. Official floor plans, lot sizes, bedrooms and pricing remain to be announced. Caivan's Oakville overview indicates freehold townhomes; confirm tenure per release. Register for verified updates.",
   factExcerpt:
-    "As of August 24, 2026: home types are single-detached and townhomes (verified). Townhome tenure is indicated as freehold on Caivan's Oakville overview. Models, lots, sizes and elevations remain to be announced.",
+    "As of August 24, 2026: home types are single-detached and townhomes (verified). Townhome tenure is indicated as freehold on Caivan's Oakville overview. Named elevations shown here are artist's concepts. Floor plans, lots and sizes remain to be announced.",
   factIds: ["home-types", "townhome-tenure", "floor-plans"],
   faqs: [faqs[2], faqs[3]],
   siblings: [
@@ -135,10 +135,10 @@ export const floorPlansPage: PageContent = {
   path: "/floor-plans",
   title: "Five Oaks Floor Plans | Oakville Plans Not Public",
   description:
-    "Five Oaks floor plans are not published. No official layouts, elevations or model packages in sources reviewed August 24, 2026. Register.",
+    "Five Oaks floor plans are not published. Named elevation renderings are artist's concepts, not layouts. Register for official plan updates.",
   h1: "Five Oaks floor plans",
   answer:
-    "Are Five Oaks floor plans available? Not yet. Official Five Oaks floor plans, elevations and model packages had not been published in the project material reviewed on August 24, 2026. This independent site does not reproduce unofficial layouts or guess bedroom counts. Register to get project updates when Caivan Communities releases official plans for the Oakville community.",
+    "Are Five Oaks floor plans available? Not yet. Interior layouts, bedroom counts and square footage have not been published. Artist's elevation renderings from current project materials appear on this page so you can see named collections. They are not floor plans, and homes as built may differ. This independent site does not invent unofficial layouts. Register when Caivan Communities releases official plans for the Oakville community.",
   factExcerpt:
     "August 24, 2026: floor plans are to be announced. Home types are confirmed as single-detached and townhomes. Bedroom, bathroom and square-footage details remain unpublished.",
   factIds: ["floor-plans", "home-types"],

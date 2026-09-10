@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { SpokePage } from "@/components/SpokePage";
+import { NeighbourhoodFigure } from "@/components/Editorial";
 import { buildPageMetadata } from "@/lib/metadata";
 import { pricingPage } from "@/lib/pages";
 import {
   copy,
   displayFactValue,
   getFact,
+  images,
   pricingStatusItems,
 } from "@/lib/project-data";
 
@@ -30,6 +32,14 @@ export default function PricingPage() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="mt-10">
+          <NeighbourhoodFigure
+            src={images.garden.src}
+            alt={images.garden.alt}
+            width={images.garden.width}
+            height={images.garden.height}
+          />
         </div>
       </section>
     </SpokePage>

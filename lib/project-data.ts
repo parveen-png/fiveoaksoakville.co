@@ -225,6 +225,7 @@ export const copy = {
   legalReviewFlag:
     "This disclosure is flagged for final Ontario legal/brokerage compliance review before launch.",
   imageQualifier: "Neighbourhood imagery for illustration only.",
+  renderingQualifier: "Artist's rendering. Homes as built may differ.",
   factsExplanation:
     "Pre-construction details can change. Time-sensitive items on these pages should be checked against current developer materials before you rely on them.",
   pricingLead:
@@ -288,14 +289,16 @@ export const homeCollection = [
   {
     id: "detached",
     title: "Single-detached homes",
-    copy: "Caivan has confirmed single-detached homes as part of Five Oaks. Models, lot widths, home sizes, features and pricing have not been published in the official material reviewed on August 24, 2026.",
+    copy: "Named detached elevations from current project materials include The Starling (40′), The Merlin (42′) and The Sandhill (50′). Those images are artist's concepts. Floor plans, lots, sizes and pricing remain to be announced.",
     status: "Details to be announced",
+    imageId: "starling40" as const,
   },
   {
     id: "townhomes",
     title: "Townhomes",
-    copy: "Caivan has confirmed townhomes for Five Oaks. Its Oakville community overview indicates freehold townhomes. Confirm tenure for the specific release. Models, dimensions, floor plans and pricing remain to be announced.",
+    copy: "Named townhome elevations from current project materials include the 24′ Collection, Advantage Townhomes and back-to-back (B2B). Those images are artist's concepts. Confirm tenure on the official release. Floor plans and pricing remain to be announced.",
     status: "Details to be announced",
+    imageId: "advantageTowns" as const,
   },
 ] as const;
 
@@ -423,16 +426,94 @@ export const buyerTimingOptions = [
 
 export const images = {
   hero: {
-    src: "https://ewzutahmskuhbsalpygn.supabase.co/storage/v1/object/public/campaign-media/uploads/five%20oaks%20hero%20image.jpg",
-    alt: "Five Oaks by Caivan in Oakville. Neighbourhood imagery for illustration only; not a Five Oaks rendering.",
-    width: 1536,
-    height: 1024,
+    src: "/images/hero-lions-valley-aerial.jpg",
+    alt: "Aerial view of Lions Valley Park and Sixteen Mile Creek near Five Oaks, Oakville",
+    width: 1024,
+    height: 682,
   },
   logo: {
     src: "https://ewzutahmskuhbsalpygn.supabase.co/storage/v1/object/public/campaign-media/uploads/Caivan-FiveOaks-Logo-Teal-RGB@2x.png",
     alt: "Five Oaks by Caivan Logo",
     width: 400,
     height: 100,
+  },
+  communityAerial: {
+    src: "/images/community-aerial.jpg",
+    alt: "Five Oaks community aerial showing the Oakville setting around Lions Valley",
+    width: 5305,
+    height: 2985,
+  },
+  pondPathway: {
+    src: "/images/pond-pathway-aerial.jpg",
+    alt: "Aerial of pond and pathway open space at Five Oaks in Oakville",
+    width: 5000,
+    height: 3300,
+  },
+  creekAerial: {
+    src: "/images/community-sixteen-mile-creek.jpg",
+    alt: "Sixteen Mile Creek valley and surrounding neighbourhood near Five Oaks, Oakville",
+    width: 1024,
+    height: 544,
+  },
+  collection24: {
+    src: "/images/24-collection-elevation-b.jpg",
+    alt: "Five Oaks 24′ Collection Elevation B, artist's rendering",
+    width: 5000,
+    height: 2674,
+  },
+  starling40: {
+    src: "/images/40-starling-corner-elevation-b.jpg",
+    alt: "Five Oaks 40′ Collection The Starling Corner Elevation B, artist's rendering",
+    width: 5000,
+    height: 2886,
+  },
+  merlin42: {
+    src: "/images/42-merlin-elevation-a.jpg",
+    alt: "Five Oaks 42′ Collection The Merlin Elevation A, artist's rendering",
+    width: 5000,
+    height: 2886,
+  },
+  sandhill50: {
+    src: "/images/50-sandhill-elevation-b.jpg",
+    alt: "Five Oaks 50′ Collection The Sandhill Elevation B, artist's rendering",
+    width: 5000,
+    height: 2885,
+  },
+  advantageTowns: {
+    src: "/images/advantage-townhomes-elevation-b.jpg",
+    alt: "Five Oaks Advantage Townhomes Elevation B, artist's rendering",
+    width: 5000,
+    height: 2673,
+  },
+  b2b: {
+    src: "/images/b2b-elevation-a.jpg",
+    alt: "Five Oaks back-to-back townhomes Elevation A, artist's rendering",
+    width: 5000,
+    height: 2780,
+  },
+  breakfast: {
+    src: "/images/breakfast.jpg",
+    alt: "Five Oaks breakfast area interior, artist's rendering",
+    width: 4500,
+    height: 5000,
+  },
+  greatRoom: {
+    src: "/images/great-room.jpg",
+    alt: "Five Oaks great room interior, artist's rendering",
+    width: 5000,
+    height: 3250,
+  },
+  kitchenSingles: {
+    src: "/images/kitchen-singles.jpg",
+    alt: "Five Oaks detached-home kitchen interior, artist's rendering",
+    width: 5000,
+    height: 3125,
+  },
+  kitchenTowns: {
+    src: "/images/kitchen-towns.jpg",
+    alt: "Five Oaks townhome kitchen interior, artist's rendering",
+    width: 4500,
+    height: 5000,
   },
   lakeshore: {
     src: "/images/oakville-lakeshore.jpg",
@@ -452,7 +533,75 @@ export const images = {
     width: 1536,
     height: 1024,
   },
+  treeCanopy: {
+    src: "/images/oakville-tree-canopy.jpg",
+    alt: "Tree canopy along an Oakville-area street. Neighbourhood illustration only; not a Five Oaks rendering.",
+    width: 1536,
+    height: 1024,
+  },
 } as const;
+
+export const elevations = [
+  {
+    id: "24-collection",
+    title: "24′ Collection",
+    type: "Townhome · Elevation B",
+    imageId: "collection24" as const,
+  },
+  {
+    id: "advantage",
+    title: "Advantage Townhomes",
+    type: "Townhome · Elevation B",
+    imageId: "advantageTowns" as const,
+  },
+  {
+    id: "b2b",
+    title: "B2B",
+    type: "Townhome · Elevation A",
+    imageId: "b2b" as const,
+  },
+  {
+    id: "starling",
+    title: "The Starling",
+    type: "Detached · 40′ · Elevation B",
+    imageId: "starling40" as const,
+  },
+  {
+    id: "merlin",
+    title: "The Merlin",
+    type: "Detached · 42′ · Elevation A",
+    imageId: "merlin42" as const,
+  },
+  {
+    id: "sandhill",
+    title: "The Sandhill",
+    type: "Detached · 50′ · Elevation B",
+    imageId: "sandhill50" as const,
+  },
+] as const;
+
+export const interiors = [
+  {
+    id: "kitchen-towns",
+    title: "Kitchen — Towns",
+    imageId: "kitchenTowns" as const,
+  },
+  {
+    id: "kitchen-singles",
+    title: "Kitchen — Singles",
+    imageId: "kitchenSingles" as const,
+  },
+  {
+    id: "great-room",
+    title: "Great Room",
+    imageId: "greatRoom" as const,
+  },
+  {
+    id: "breakfast",
+    title: "Breakfast",
+    imageId: "breakfast" as const,
+  },
+] as const;
 
 export function wordCount(text: string): number {
   return text.trim().split(/\s+/).filter(Boolean).length;

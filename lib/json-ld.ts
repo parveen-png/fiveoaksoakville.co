@@ -101,7 +101,7 @@ export function buildJsonLd(options: JsonLdOptions = { page: homePage }) {
       url: imageUrl(),
       contentUrl: imageUrl(),
       caption:
-        "Neighbourhood imagery for illustration only. This photograph does not depict the Five Oaks project.",
+        "Aerial view of Lions Valley Park and Sixteen Mile Creek near Five Oaks, Oakville.",
       width: images.hero.width,
       height: images.hero.height,
     },

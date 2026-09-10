@@ -10,6 +10,7 @@ import {
   FaqList,
   NeighbourhoodFigure,
   OfficialSources,
+  RenderingFigure,
   SiblingLinks,
 } from "@/components/Editorial";
 import { LeadForm } from "@/components/LeadForm";
@@ -129,20 +130,31 @@ export default function Home() {
               </p>
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-2">
-              {homeCollection.map((home) => (
-                <article
-                  key={home.id}
-                  className="border border-paper-elevated/15 p-6"
-                >
-                  <h3 className="font-display text-2xl">{home.title}</h3>
-                  <p className="mt-2 text-xs tracking-[0.16em] text-gold uppercase">
-                    {home.status}
-                  </p>
-                  <p className="mt-4 text-base leading-7 text-paper-elevated/85">
-                    {home.copy}
-                  </p>
-                </article>
-              ))}
+              {homeCollection.map((home) => {
+                const image = images[home.imageId];
+                return (
+                  <article
+                    key={home.id}
+                    className="overflow-hidden border border-paper-elevated/15 bg-paper-elevated text-ink"
+                  >
+                    <RenderingFigure
+                      src={image.src}
+                      alt={image.alt}
+                      width={image.width}
+                      height={image.height}
+                    />
+                    <div className="p-6">
+                      <h3 className="font-display text-2xl">{home.title}</h3>
+                      <p className="mt-2 text-xs tracking-[0.16em] text-bronze uppercase">
+                        {home.status}
+                      </p>
+                      <p className="mt-4 text-base leading-7 text-ink">
+                        {home.copy}
+                      </p>
+                    </div>
+                  </article>
+                );
+              })}
             </div>
             <Link
               href="/homes"
@@ -155,11 +167,11 @@ export default function Home() {
 
         <section className="bg-paper py-16 md:py-24">
           <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 sm:px-6 lg:grid-cols-2 lg:px-8">
-            <NeighbourhoodFigure
-              src={images.lakeshore.src}
-              alt={images.lakeshore.alt}
-              width={images.lakeshore.width}
-              height={images.lakeshore.height}
+            <RenderingFigure
+              src={images.communityAerial.src}
+              alt={images.communityAerial.alt}
+              width={images.communityAerial.width}
+              height={images.communityAerial.height}
             />
             <div>
               <p className="text-[0.7rem] font-semibold tracking-[0.22em] text-bronze uppercase">
@@ -188,6 +200,14 @@ export default function Home() {
                 Where is Five Oaks?
               </Link>
             </div>
+          </div>
+          <div className="mx-auto mt-10 max-w-6xl px-5 sm:px-6 lg:px-8">
+            <NeighbourhoodFigure
+              src={images.lakeshore.src}
+              alt={images.lakeshore.alt}
+              width={images.lakeshore.width}
+              height={images.lakeshore.height}
+            />
           </div>
         </section>
 

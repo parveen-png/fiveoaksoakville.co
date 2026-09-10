@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { SpokePage } from "@/components/SpokePage";
-import { NeighbourhoodFigure } from "@/components/Editorial";
+import {
+  NeighbourhoodFigure,
+  RenderingFigure,
+} from "@/components/Editorial";
 import { buildPageMetadata } from "@/lib/metadata";
 import { locationPage } from "@/lib/pages";
 import { copy, images, project } from "@/lib/project-data";
@@ -26,12 +29,38 @@ export default function LocationPage() {
           by Caivan for Oakville generally is not used here as a Five Oaks map
           pin.
         </p>
-        <div className="mt-8">
+        <div className="mt-8 grid gap-8">
+          <RenderingFigure
+            src={images.communityAerial.src}
+            alt={images.communityAerial.alt}
+            width={images.communityAerial.width}
+            height={images.communityAerial.height}
+          />
+          <RenderingFigure
+            src={images.pondPathway.src}
+            alt={images.pondPathway.alt}
+            width={images.pondPathway.width}
+            height={images.pondPathway.height}
+          />
+          <RenderingFigure
+            src={images.creekAerial.src}
+            alt={images.creekAerial.alt}
+            width={images.creekAerial.width}
+            height={images.creekAerial.height}
+          />
+        </div>
+        <div className="mt-8 grid gap-8 sm:grid-cols-2">
           <NeighbourhoodFigure
             src={images.park.src}
             alt={images.park.alt}
             width={images.park.width}
             height={images.park.height}
+          />
+          <NeighbourhoodFigure
+            src={images.treeCanopy.src}
+            alt={images.treeCanopy.alt}
+            width={images.treeCanopy.width}
+            height={images.treeCanopy.height}
           />
         </div>
       </section>

@@ -1,9 +1,12 @@
 import { describe, expect, it } from "vitest";
 import {
   displayFactValue,
+  elevations,
   faqs,
   facts,
   getFact,
+  images,
+  interiors,
   userMessages,
   wordCount,
   copy,
@@ -199,6 +202,44 @@ describe("privacy-conscious logging and analytics", () => {
     expect(clean.email).toBeUndefined();
     expect(clean.phone).toBeUndefined();
     expect(clean.placement).toBe("hero");
+  });
+});
+
+describe("campaign images", () => {
+  it("uses local files according to their source names", () => {
+    expect(images.hero.src).toBe("/images/hero-lions-valley-aerial.jpg");
+    expect(images.communityAerial.src).toBe("/images/community-aerial.jpg");
+    expect(images.pondPathway.src).toBe("/images/pond-pathway-aerial.jpg");
+    expect(images.creekAerial.src).toBe(
+      "/images/community-sixteen-mile-creek.jpg",
+    );
+    expect(images.collection24.src).toBe(
+      "/images/24-collection-elevation-b.jpg",
+    );
+    expect(images.starling40.src).toBe(
+      "/images/40-starling-corner-elevation-b.jpg",
+    );
+    expect(images.merlin42.src).toBe("/images/42-merlin-elevation-a.jpg");
+    expect(images.sandhill50.src).toBe("/images/50-sandhill-elevation-b.jpg");
+    expect(images.advantageTowns.src).toBe(
+      "/images/advantage-townhomes-elevation-b.jpg",
+    );
+    expect(images.b2b.src).toBe("/images/b2b-elevation-a.jpg");
+    expect(images.breakfast.src).toBe("/images/breakfast.jpg");
+    expect(images.greatRoom.src).toBe("/images/great-room.jpg");
+    expect(images.kitchenSingles.src).toBe("/images/kitchen-singles.jpg");
+    expect(images.kitchenTowns.src).toBe("/images/kitchen-towns.jpg");
+    expect(images.lakeshore.src).toBe("/images/oakville-lakeshore.jpg");
+    expect(images.park.src).toBe("/images/oakville-park-trail.jpg");
+    expect(images.garden.src).toBe("/images/architectural-garden.jpg");
+    expect(images.treeCanopy.src).toBe("/images/oakville-tree-canopy.jpg");
+    expect(elevations).toHaveLength(6);
+    expect(interiors.map((item) => images[item.imageId].src)).toEqual([
+      "/images/kitchen-towns.jpg",
+      "/images/kitchen-singles.jpg",
+      "/images/great-room.jpg",
+      "/images/breakfast.jpg",
+    ]);
   });
 });
 
