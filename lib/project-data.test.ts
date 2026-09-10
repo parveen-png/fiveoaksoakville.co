@@ -17,6 +17,7 @@ import { buildJsonLd, jsonLdContainsForbidden } from "./json-ld";
 import { redactRecord } from "./logger";
 import { sanitizeAnalyticsParams } from "./analytics";
 import { siteConfig, sitePageUrl } from "./site-config";
+import { buildSitemapXml } from "./sitemap";
 import {
   allMoneyPages,
   faqsPage,
@@ -288,5 +289,19 @@ describe("site page URLs", () => {
       "/privacy",
       "/disclaimer",
     ]);
+  });
+
+  it("emits a urlset Google can parse with every public page loc", () => {
+    const xml = buildSitemapXml();
+    expect(xml.startsWith("<?xml version=\"1.0\" encoding=\"UTF-8\"?>")).toBe(
+      true,
+    );
+    expect(xml).toContain(
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    );
+    expect(xml).toContain("</urlset>");
+    for (const path of sitemapPaths) {
+      expect(xml).toContain(`<loc>${sitePageUrl(path)}</loc>`);
+    }
   });
 });
